@@ -53,12 +53,12 @@ public class EmployeeBean {
 		this.isActive = isActive;
 	}
 
-	public double geteSalary() {
-		return eSalary;
+	public double getSalary() {
+		return salary;
 	}
 
-	public void seteSalary(double eSalary) {
-		this.eSalary = eSalary;
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
 
 }

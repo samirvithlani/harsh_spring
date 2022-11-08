@@ -35,7 +35,7 @@ public class EmployeeController {
 	public ResponseEntity<?> getEmptrue(){
 		
 		//List<EmployeeBean> employees = employeeDao.findByeNameisStartsWith("sa");
-		List<EmployeeBean> employees = employeeDao.findbyAGes(7852452.25);
+		List<EmployeeBean> employees = employeeDao.getAllEmployee();
 		if(employees.size()>0) {
 			
 			return new ResponseEntity<Object>(employees, HttpStatus.OK);

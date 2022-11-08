@@ -18,35 +18,39 @@ public class EmployeeDao implements EmployeeServices {
 	@Override
 	public int saveEmployee(EmployeeBean employeeBean) {
 
-		int res=0;
+		int res = 0;
 		try {
 			employeeRepository.save(employeeBean);
-			res=1;
-		}
-		catch (Exception e) {
+			res = 1;
+		} catch (Exception e) {
 
-			res =-1;
+			res = -1;
 		}
 		return res;
 	}
 
 	@Override
 	public List<EmployeeBean> findByTrue() {
-		
+
 		return employeeRepository.findByisActiveFalse();
 	}
 
 	@Override
 	public List<EmployeeBean> findByeNameisStartsWith(String eName) {
-		
+
 		return employeeRepository.findByeNameContaining(eName);
 	}
 
 	@Override
 	public List<EmployeeBean> findbyAGes(double sal) {
-		
+
 		return employeeRepository.findBySalaryGreaterThan(sal);
 	}
-	
+
+	@Override
+	public List<EmployeeBean> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return employeeRepository.findAllEmployee();
+	}
 
 }

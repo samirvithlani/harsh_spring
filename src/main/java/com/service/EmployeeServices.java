@@ -13,5 +13,6 @@ public interface EmployeeServices {
 	public List<EmployeeBean> findByTrue();
 	public List<EmployeeBean> findByeNameisStartsWith(String eName);
 	public List<EmployeeBean> findbyAGes(double eSalary);
+	public List<EmployeeBean> getAllEmployee();
 	
 }
